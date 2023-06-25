@@ -118,7 +118,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "https://pw6bupaglznzzrx7jhs2dqykue0lyadn.lambda-url.us-east-2.on.aws",
+			"value": "https://fhwjx9o3s5.execute-api.us-east-2.amazonaws.com/default/demo-lambda",
 			"type": "string"
 		},
 		{
