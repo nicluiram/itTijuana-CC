@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "2c6442f1-5796-48d6-873b-9e0543791242",
+		"name": "Hash",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "404613"
+	},
+	"item": [
+		{
+			"name": "Hash-InvalidInput",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "spring.cloud.function.definition",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"input\": \"Password1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hash-InvalidLength",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "spring.cloud.function.definition",
+						"value": "hash",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"input\": \"Pass\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hash",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "spring.cloud.function.definition",
+						"value": "hash",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"input\": \"Password1%\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://pw6bupaglznzzrx7jhs2dqykue0lyadn.lambda-url.us-east-2.on.aws",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "http://localhost:8080/hash",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
